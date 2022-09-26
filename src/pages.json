@@ -1,16 +1,92 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+			"path": "pages/home/home",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "黑马优购"
+			}
+		},
+		{
+			"path": "pages/category/category",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		},
+		{
+			"path": "pages/card/card",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的"
 			}
 		}
 	],
+	"subPackages": [
+		{
+			"root": "pages_sub1",
+			"pages": [
+				{
+					"path": "product-detail/product-detail",
+					"style":{
+						"navigationBarTitleText": "商品详情"
+					}
+				},
+				{
+					"path": "product-list/product-list",
+					"style":{
+						"navigationBarTitleText": "商品列表",
+						"onReachBottomDistance": 200,
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "search/search",
+					"style": {
+						"navigationBarTitleText": "商品搜索"
+					}
+				}
+			]
+		}
+	],
+	"tabBar": {
+		"color": "#000000",
+		"selectedColor": "#C00000",
+		"borderStyle": "black",
+		"list": [
+			{
+			"pagePath": "pages/home/home",
+			"iconPath": "static/tabs/icon_home@3x.png",
+			"selectedIconPath": "static/tabs/icon_home_active@3x.png",
+			"text": "首页"
+			}, 
+			{
+				"pagePath": "pages/category/category",
+				"iconPath": "static/tabs/icon_category@3x.png",
+				"selectedIconPath": "static/tabs/icon_category_active@3x.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/card/card",
+				"iconPath": "static/tabs/icon_cart@3x.png",
+				"selectedIconPath": "static/tabs/icon_cart_active@3x.png",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"iconPath": "static/tabs/icon_user@3x.png",
+				"selectedIconPath": "static/tabs/icon_user_active@3x.png",
+				"text": "我的"
+			}
+	]
+	},
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "黑马优购",
+		"navigationBarBackgroundColor": "#C00000",
 		"backgroundColor": "#F8F8F8"
 	},
 	"easycom": {
